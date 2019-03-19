@@ -82,6 +82,74 @@ const showData = (data) => {
     });
   }
 
+  //orden
+selectOrderdata.addEventListener('change', () => {
+ let condition = selectOrderdata.value
+ let ordered = window.sortData(data, condition);
+ //Limpiando el div
+ containerRoot.innerHTML = '';
+ cardSteam(ordered);
+})
+
+  //Función para todas las tarjetas
+  function cardSteam(dataSteam){
+    // limpio div
+    containerRoot.innerHTML = '';
+
+    dataSteam.forEach(element => {
+      if (element.author === '' && element.feedlabel !== '') {
+        containerRoot.innerHTML += `
+        <div>
+        <div class="card">
+        <div class="box">
+        <div class="ahref">
+        <a href="${element.url}">
+        </div>
+        <h2>
+        ${element.title}
+        <br>
+        <span>
+        Autor: Desconocido
+        </span>
+        </h2>
+        <p>
+        ${element.contents}
+        </p>
+        <p>
+        FeedLabel: ${element.feedlabel}
+        </p>
+        </div>
+        </div>
+        </div>`
+      } 
+      else {
+        containerRoot.innerHTML += `
+        <div>
+        <div class="card">
+        <div class="box">
+        <div class="img">
+        <img src="${element.url}">
+        </div>
+        <h2>
+        ${element.title}
+        <br>
+        <span>
+        ${element.author}
+        </span>
+        </h2>
+        <p>
+        ${element.contents}
+        </p>
+        <p>
+        FeedLabel: ${element.feedlabel}
+        </p>
+        </div>
+        </div>
+        </div>` 
+      }
+    });
+  }
+
 //Cálculo
 
 const calcule = selectFeedlabel;
