@@ -50,7 +50,7 @@ La barra de navegación tiene links de interés relacionados con el juego.
 
 ### Historias de usuarios
 
-[Planilla de historias de usuario]
+[Planilla de historias de usuario](https://docs.google.com/spreadsheets/d/1uKtDx5rIeM7C-hJweXXrdobV7e7X8b62cjwAb9mFYW0/edit?usp=sharing)
 
 ### User-personas
 
@@ -59,6 +59,11 @@ La barra de navegación tiene links de interés relacionados con el juego.
 
 ## 📋 Consideraciones para el diseño de la interfaz del usuario
 
+Esta aplicación contiene 2 html, el primero es de introducción al juego y contiene un botón de acceso al segundo html y una imagen relacionada con el juego.
+
+El seguno archivo html contine dos seleccionadores de contenido y muestra la data a través de tarjetas.
+
+Ambas páginas contienen la misma barra de navegación conectado a links de interés.
 
 #### Prototipo de baja fidelidad
 
@@ -73,11 +78,11 @@ Se realiza pruebas con seis usuarios, los cuales deben realizar las siguientes t
 - Filtrar según fecha de publicación.
 - Informarse sobre el Team Fortress.
 
-Usuario1: 
+Usuario1: Sugiere agergar un link para volver al Inicio (página 1). 
 
-Usuario2:  
+Usuario2: Sugiere ordenar por fecha de publicación y no alfabéticamente. 
 
-Usuario3: 
+Usuario3: Sugiere linkear las tarjetas con el sitio oficial del juego.
 
 Y procedemos a realizar las modificaciones correspondientes con las sugerencias de los usuarios testeados, y los cambios generados son los siguientes:
 
