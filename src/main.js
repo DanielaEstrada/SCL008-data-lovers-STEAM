@@ -59,8 +59,8 @@ const showData = (data) => {
         <div>
         <div class="card">
         <div class="box">
-        <div class="img">
-        <img src="${element.url}">
+        <div class="ahref">
+        <a href="${element.url}">
         </div>
         <h2>
         ${element.title}
@@ -127,8 +127,8 @@ selectOrderdata.addEventListener('change', () => {
         <div>
         <div class="card">
         <div class="box">
-        <div class="img">
-        <img src="${element.url}">
+        <div class="ahref">
+        <a href="${element.url}">
         </div>
         <h2>
         ${element.title}
