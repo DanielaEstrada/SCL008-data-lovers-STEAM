@@ -1,6 +1,6 @@
 # Team Fortress News
 
-![TF4ever](img/fortress4ever.jpg)
+![TF4ever](../img/fortress4ever.jpg)
 
 ## Índice
 
@@ -45,6 +45,7 @@ La barra de navegación tiene links de interés relacionados con el juego.
 
 ### Flujo
 
+![Flujo](../img/flujoSteam.png)
 
 ## 👦👧 Estudio de usuarios
 
@@ -56,14 +57,17 @@ La barra de navegación tiene links de interés relacionados con el juego.
 
 ### User-personas
 
-![Eduardo](img/user-persona-Eduardo.png)
-![Rodrigo](img/user-persona-Rodrigo.png)
+![Eduardo](../img/user-persona-Eduardo.png)
+![Rodrigo](../img/user-persona-Rodrigo.png)
 
 ## 📋 Consideraciones para el diseño de la interfaz del usuario
 
 
 #### Prototipo de baja fidelidad
 
+![Mockup1](../img/mockup1.png)
+![Mockup2](../img/mockup2.png)
+![Mockup3](../img/mockup3.png)
 
 #### Testeos de usabilidad
 
