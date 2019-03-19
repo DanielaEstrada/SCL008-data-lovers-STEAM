@@ -110,7 +110,7 @@ Se utilizó Bootstrap para la implementación de estilo.
 
 ##  ✏️ Planificación
 
-[Trello]
+https://github.com/DanielaEstrada/SCL008-data-lovers-STEAM/projects/1
 
 ## Contenido de referencia
 
