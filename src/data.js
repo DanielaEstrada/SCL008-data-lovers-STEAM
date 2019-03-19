@@ -5,25 +5,13 @@ const filterFeedlabel = (data, condition) => {
       return element.feedlabel === condition
   })
   return filteredFeedlabel;
+}
+
+//Cálculo
+const computeStats = (data, condition) => {
+  let result = filterFeedlabel(data, condition).length;
+  return result;
 };
 
 window.filterFeedlabel = filterFeedlabel;
-
-//Orden
-const sortData = (data, sortBy, sortOrder) => {
-  
-  let orderData = data.sort((a,b) => {
-    return a [sortBy].localeCompare(b[sortBy]);
-  });
-  if (sortOrder === "za"){
-    orderData.reverse();
-  }
-  return orderData
-};
-
-window.sortData = sortData;
-
-//Cálculo.
-  computeStats: (data) => {
-    return data.length;
-  }
+window.computeStats = computeStats;

@@ -1,16 +1,16 @@
 
-let data = (window.STEAM.appnews.newsitems);
+const data = window.STEAM.appnews.newsitems;
 const containerRoot = document.getElementById("root");
 const selectFeedlabel = document.getElementById("feedlabel");
-const selectOrderData = document.getElementById("orderdata");
+const selectOrderdata = document.getElementById("orderdata");
 
 
 //Mostrando la Data
 const showData = (data) => {
-    let result = '';
+  let result = '';
 
-    cardSteam(data);
-    return result;
+  cardSteam(data);
+  return result;
 }
 
 
@@ -21,18 +21,7 @@ const showData = (data) => {
     //Limpiando el div
     containerRoot.innerHTML = '';
     cardSteam(filtered);
-})
-
-   /*//Ordenando
-    selectOrderData.addEventListener('change', () => {
-    let option = selectOrderData.value
-    let ordered = window.sortData(data,'feedlabel',option);
-    //Limpiando el div
-    containerOrder.innerHTML = '';
-    cardSteam(ordered);*/
-
-
-
+  })
 
     //Función para todas las tarjetas
     function cardSteam(dataSteam){
@@ -41,57 +30,67 @@ const showData = (data) => {
     
     dataSteam.forEach(element => {
       if (element.author === '' && element.feedlabel !== '') {
-          containerRoot.innerHTML += `
-          <div>
-          <div class="card">
-          <div class="box">
-          <div class="ahref">
-          <a href="${element.url}">
-          </div>
-          <h2>
-          ${element.title}
-          <br>
-          <span>
-          Autor: Desconocido
-          </span>
-          </h2>
-          <p>
-          ${element.contents}
-          </p>
-          <p>
-          FeedLabel: ${element.feedlabel}
-          </p>
-          </div>
-          </div>
-          </div>`
+        containerRoot.innerHTML += `
+        <div>
+        <div class="card">
+        <div class="box">
+        <div class="ahref">
+        <a href="${element.url}">
+        </div>
+        <h2>
+        ${element.title}
+        <br>
+        <span>
+        Autor: Desconocido
+        </span>
+        </h2>
+        <p>
+        ${element.contents}
+        </p>
+        <p>
+        FeedLabel: ${element.feedlabel}
+        </p>
+        </div>
+        </div>
+        </div>`
       } 
       else {
-          containerRoot.innerHTML += `
-          <div>
-          <div class="card">
-          <div class="box">
-          <div class="img">
-          <img src="${element.url}">
-          </div>
-          <h2>
-          ${element.title}
-          <br>
-          <span>
-          ${element.author}
-          </span>
-          </h2>
-          <p>
-          ${element.contents}
-          </p>
-          <p>
-          FeedLabel: ${element.feedlabel}
-          </p>
-          </div>
-          </div>
-          </div>` 
+        containerRoot.innerHTML += `
+        <div>
+        <div class="card">
+        <div class="box">
+        <div class="img">
+        <img src="${element.url}">
+        </div>
+        <h2>
+        ${element.title}
+        <br>
+        <span>
+        ${element.author}
+        </span>
+        </h2>
+        <p>
+        ${element.contents}
+        </p>
+        <p>
+        FeedLabel: ${element.feedlabel}
+        </p>
+        </div>
+        </div>
+        </div>` 
       }
-  });
-}
+    });
+  }
 
+//Cálculo
 
-window.onload = showData(data);
+const calcule = selectFeedlabel;
+calcule.addEventListener('click', () =>{
+let condition = calcule.value;
+let result = window.computeStats(data,condition);
+containerRoot.innerHTML+=`
+<h3>Total</h3>
+<h3>${result}</h3>`
+})
+
+  window.onload = showData(data);
